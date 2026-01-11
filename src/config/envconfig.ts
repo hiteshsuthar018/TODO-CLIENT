@@ -1,1 +1,1 @@
-export const VITE_BACKEND_URL="http://api.hitesh.live/api"
+export const VITE_BACKEND_URL="https://api.hitesh.live/api"
