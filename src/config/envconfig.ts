@@ -1,0 +1,1 @@
+export const VITE_BACKEND_URL="http://api.hitesh.live/api"

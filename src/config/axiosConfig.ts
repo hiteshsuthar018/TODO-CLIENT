@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { VITE_BACKEND_URL } from './envconfig';
 
 const axiosInstance = axios.create({
-    baseURL:import.meta.env.VITE_BACKEND_URL
+    baseURL:VITE_BACKEND_URL
 })
 
 axiosInstance.interceptors.request.use((config) => {
