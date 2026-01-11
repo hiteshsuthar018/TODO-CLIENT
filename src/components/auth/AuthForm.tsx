@@ -59,6 +59,7 @@ const AuthForm = ({ mode, onSubmit, loading = false, error }: AuthFormProps) => 
             <input
               type="text"
               required
+              placeholder="Enter Your Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className={inputClasses}
@@ -71,6 +72,7 @@ const AuthForm = ({ mode, onSubmit, loading = false, error }: AuthFormProps) => 
           <input
             type="email"
             required
+            placeholder="Enter Your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={inputClasses}
@@ -83,6 +85,7 @@ const AuthForm = ({ mode, onSubmit, loading = false, error }: AuthFormProps) => 
             <input
               type={showPassword ? "text" : "password"}
               required
+              placeholder="Enter Your Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className={`${inputClasses} pr-10`}
