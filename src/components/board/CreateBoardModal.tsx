@@ -28,7 +28,7 @@ const CreateBoardModal: React.FC<CreateBoardModalProps> = ({
   };
 
   return (
-    <Modal open={open} onClose={onClose} title="Create Board">
+    <Modal open={open}  title="Create Board">
       <form onSubmit={handleSubmit} className="space-y-4">
         <Input
           placeholder="Board title"
