@@ -34,19 +34,7 @@ const Modal: React.FC<ModalProps> = ({
 
         {children}
 
-        <div className="mt-4 sm:mt-6 text-right">
-          <button
-            onClick={onClose}
-            className={`
-              text-sm sm:text-base px-3 py-1.5 rounded transition
-              ${isDark 
-                ? "text-gray-400 hover:text-white hover:bg-zinc-800" 
-                : "text-gray-600 hover:text-black hover:bg-gray-100"
-              }
-            `}
-          >
-            Close
-          </button>
+      
         </div>
       </div>
     </div>
