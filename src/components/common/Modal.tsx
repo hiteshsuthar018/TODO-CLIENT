@@ -3,14 +3,12 @@ import { useThemeStore } from "../../store/themeStore";
 
 interface ModalProps {
   open: boolean;
-  onClose: () => void;
   title?: string;
   children: React.ReactNode;
 }
 
 const Modal: React.FC<ModalProps> = ({
   open,
-  onClose,
   title,
   children,
 }) => {
@@ -34,8 +32,7 @@ const Modal: React.FC<ModalProps> = ({
 
         {children}
 
-      
-        </div>
+       
       </div>
     </div>
   );
