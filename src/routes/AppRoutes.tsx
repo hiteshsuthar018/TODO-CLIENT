@@ -31,6 +31,20 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({
   return <>{children}</>;
 };
 
+// Naviate Route
+const NavigateRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { isAuthenticated, loading:authLoading } = useAuthStore();
+
+  if (authLoading) {
+    return null; // or a loader
+  }
+
+  if (isAuthenticated) {
+    return <Navigate to="/" replace />;
+  }
+
+  return <>{children}</>;
+}
 // App routes
 
 const AppRoutes: React.FC = () => {
@@ -38,8 +52,16 @@ const AppRoutes: React.FC = () => {
     <BrowserRouter>
       <Routes>
         {/* Public routes */}
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={
+          <NavigateRoute>
+          <Signin />
+          </NavigateRoute>
+        } />
+        <Route path="/signup" element={
+          <NavigateRoute>
+          <Signup />
+          </NavigateRoute>
+        } />
 
         {/* Protected routes */}
         <Route
